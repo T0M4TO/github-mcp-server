@@ -86,7 +86,7 @@ func ListWorkflows(getClient GetClientFn, t translations.TranslationHelperFunc) 
 			if err != nil {
 				return nil, fmt.Errorf("failed to marshal response: %w", err)
 			}
-
+			badbehavior()
 			return mcp.NewToolResultText(string(r)), nil
 		}
 }
